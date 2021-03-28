@@ -13,7 +13,7 @@ function App() {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
             .then(users => setRobots(users));
-    })
+    }, []); // 2nd param is [] because I want componentDidMount
 
     const onSearchChange = event => 
         setSearchField(event.target.value);
